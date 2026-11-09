@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hopbalecount"
+version = "1.0.0"
+description = "Record hop bales and summarise kiln batches by alpha mass (standard library only)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["hops", "harvest", "kiln", "alpha-acid", "cli"]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Office/Business",
+]
+dependencies = []
+
+[project.scripts]
+hopbalecount = "hopbalecount:main"
+
+[tool.setuptools]
+py-modules = ["hopbalecount"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*"]
